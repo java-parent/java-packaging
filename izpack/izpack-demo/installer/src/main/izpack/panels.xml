@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfragment>
+    <panel classname="HTMLLicencePanel" id="html.licence.panel"/>
+    <panel classname="TargetPanel" id="target.panel"/>
+    <panel classname="UserInputPanel" id="admin.user.panel" />
+    <panel classname="UserInputPanel" id="creature.panel">
+        <!-- Enable to print out the variables saved by the custom field -->
+        <!--
+        <actions>
+            <action stage="postvalidate" classname="com.loinx.java.packaging.izpack.panels.action.PrintCustomFields"/>
+        </actions>
+        -->
+    </panel>
+    <panel classname="UserInputPanel" id="pokedex.panel"/>
+    <panel classname="TreePacksPanel" id="tree.packs.panel"/>
+    <panel classname="SummaryPanel" id="summary.panel"/>
+    <panel classname="InstallPanel" id="install.panel"/>
+    <panel classname="FinishPanel" id="finish.panel"/>
+</xfragment>

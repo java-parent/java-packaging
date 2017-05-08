@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xfragment>
+    <!-- Packs conditions-->
+    <condition type="packselection" id="beginner.pack">
+        <name>beginner.pack</name>
+    </condition>
+    <condition type="packselection" id="intermediate.pack">
+        <name>intermmediate.pack</name>
+    </condition>
+    <condition type="packselection" id="advanced.pack">
+        <name>advanced.pack</name>
+    </condition>
+
+    <!-- Secret Character -->
+    <condition type="variable" id="secret.character">
+        <name>admin.user</name>
+        <value>Ash</value>
+    </condition>
+</xfragment>

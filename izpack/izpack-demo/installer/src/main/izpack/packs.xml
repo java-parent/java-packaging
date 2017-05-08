@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xfragment>
+	<pack id="demo-app.pack" name="demo-app.pack" preselected="yes"
+		required="yes">
+		<description>The demo application.</description>
+		<fileset dir="package" targetdir="$INSTALL_PATH">
+			<include name="demo-app.exe" />
+		</fileset>
+	</pack>
+	<pack id="beginner.pack" name="beginner.pack" required="no" preselected="no">
+		<description>Recommended for beginners.</description>
+		<fileset dir="package" targetdir="$INSTALL_PATH">
+			<include name="beginner.txt" />
+		</fileset>
+	</pack>
+	<pack id="intermediate.pack" name="intermediate.pack" preselected="no"
+		required="no">
+		<description>Recommended for the expereinced.</description>
+		<fileset dir="package" targetdir="$INSTALL_PATH">
+			<include name="intermediate.txt" />
+		</fileset>
+	</pack>
+	<pack id="advanced.pack" name="advanced.pack" preselected="no"
+		required="no">
+		<description>Recommended for the gurus.</description>
+		<fileset dir="package" targetdir="$INSTALL_PATH">
+			<include name="advanced.txt" />
+		</fileset>
+	</pack>
+</xfragment>

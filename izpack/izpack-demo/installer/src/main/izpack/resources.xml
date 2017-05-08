@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xfragment>
+    <res id="Heading.image" src="images/heading.png"/>
+    <res id="Splash.image" src="images/splash.jpg"/>
+    <res id="HTMLLicencePanel.licence" src="legal/manifesto.html"/>
+    <res id="CustomLangPack.xml" src="langpacks/CustomLangPack.xml"/>
+    <res id="userInputSpec.xml" src="userInputSpec.xml" parse="yes" type="xml"/>
+</xfragment>

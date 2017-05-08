@@ -1,0 +1,101 @@
+<userInput>
+
+    <!-- Administrative user creation -->
+    <panel id="admin.user.panel" topBuffer="50" rigid="true" summaryKey="admin.user.panel">
+        <field type="title" bold="true" size="2" id="admin.user.panel.title"/>
+        <field type="staticText" id="admin.user.panel.info"/>
+        <field type="space"/>
+        <field type="staticText" id="admin.user.password.info"/>
+        <field type="space"/>
+        <field type="text" variable="admin.user" summaryKey="admin.user">
+           <spec id="admin.user" size="16" />
+        </field>
+        <field type="space"/>
+        <field type="password" variable="admin.user.password">
+            <spec>
+                <pwd id="admin.user.password" size="16" />
+                <pwd id="admin.user.password.confirm" size="16" />
+            </spec>
+            <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" id="password.empty" />
+            <validator class="com.izforge.izpack.panels.userinput.validator.PasswordEqualityValidator" id="password.not.equal" />
+            <validator class="com.izforge.izpack.panels.userinput.validator.RegularExpressionValidator" id="password.min.eight.chars">
+                <param name="pattern" value=".{8,}" />
+            </validator>
+            <validator class="com.izforge.izpack.panels.userinput.validator.RegularExpressionValidator" id="password.min.one.digits">
+                <param name="pattern" value=".*[0-9].*" />
+            </validator>
+            <validator class="com.izforge.izpack.panels.userinput.validator.RegularExpressionValidator" id="password.min.one.nonalphanum">
+                <param name="pattern" value=".*[^a-zA-Z0-9].*" />
+            </validator>
+        </field>
+    </panel>
+
+    <!-- Creature creation -->
+    <panel id="creature.panel" topBuffer="50" rigid="true" summaryKey="creature.panel.title">
+        <field type="title" bold="true" size="2" id="creature.panel.title"/>
+        <field type="staticText" id="creature.panel.info"/>
+        <field type="space"/>
+        <field type="custom" minRow="1" maxRow="3" variable="creature.count">
+            <spec>
+                <col>
+                    <field type="combo" variable="creature.type" summaryKey="creature.type">
+                        <description id="creature.type"/>
+                        <spec id="creature.type">
+                            <choice id="creature.type.1" value="Bulbasaur"/>
+                            <choice id="creature.type.2" value="Charmander"/>
+                            <choice id="creature.type.3" value="Geodude"/>
+                            <choice id="creature.type.4" value="Mew"/>
+                            <choice id="creature.type.5" value="Pikachu"/>
+                            <choice id="creature.type.6" value="Squirtle"/>
+                        </spec>
+                    </field>
+                    <validator class="com.izforge.izpack.panels.userinput.validator.UniqueValidator" id="creature.unique" />
+                </col>
+                <col>
+                    <field type="combo" variable="creature.colour">
+                        <description id="creature.colour"/>
+                        <spec id="creature.colour">
+                            <choice id="creature.colour.1" value="Blue"/>
+                            <choice id="creature.colour.2" value="Green"/>
+                            <choice id="creature.colour.3" value="Indigo"/>
+                            <choice id="creature.colour.4" value="Orange"/>
+                            <choice id="creature.colour.5" value="Red"/>
+                            <choice id="creature.colour.6" value="Violet"/>
+                            <choice id="creature.colour.7" value="Yellow"/>
+                        </spec>
+                    </field>
+                </col>
+                <col id="creature.name">
+                    <field type="text" variable="creature.name" summaryKey="creature.name">
+                        <spec id="creature.name" size="10"/>
+                        <validator class="com.izforge.izpack.panels.userinput.validator.NotEmptyValidator" id="creature.name.empty" />
+                    </field>
+                </col>
+            </spec>
+        </field>
+    </panel>
+
+    <!-- Pokedex Panel -->
+    <panel id="pokedex.panel" topBuffer="50" rigid="true">
+        <field type="title" bold="true" size="2" id="pokedex.panel.title"/>
+        <field type="staticText" id="pokedex.panel.info"/>
+        <field type="space"/>
+        <field type="text" variable="pokedex.pokemon">
+           <spec id="pokedex.pokemon" size="16" />
+        </field>
+        <field type="button" id="pokedex.query">
+            <spec id="pokedex.button" successMsg="pokedex.working">
+                <run class="com.mtjandra.button.PokemonConnectionTest" >
+                    <msg id="pokedex.error" name="error"/>
+                </run>
+            </spec>
+        </field>
+        <field type="button" id="pokedex.pokemon.query">
+            <spec id="pokedex.pokemon.button" successMsg="pokedex.pokemon.working">
+                <run class="com.mtjandra.button.PokemonExistsTest" >
+                    <msg id="pokedex.pokemon.error" name="error"/>
+                </run>
+            </spec>
+        </field>
+    </panel>
+</userInput>

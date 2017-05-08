@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xfragment>
+    <!-- Target Panel Variables -->
+    <variable name="TargetPanel.dir.unix" value="~/simple_app/"/>
+    <variable name="TargetPanel.dir.windows" value="C:\simple_app\"/>
+
+    <!-- Administrative User Variables -->
+    <variable name="admin.user" value="admin"/>
+    <variable name="admin.user.password" value=""/>
+
+    <!-- Creature Variables -->
+    <variable name="creature.count" value="0"/>
+
+    <!-- Pokedex Variables -->
+    <variable name="pokedex.pokemon" value="Pikachu"/>
+</xfragment>

@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.loinx.java.packaging</groupId>
+		<artifactId>packaging-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>izpack</artifactId>
+	<packaging>pom</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<izpack.version>5.0.6</izpack.version>
+		<launch4j.version>1.7.15</launch4j.version>
+		<commons-io.version>2.5</commons-io.version>
+	</properties>
+
+	<modules>
+		<module>izpack-demo</module>
+	</modules>
+	<dependencyManagement>
+		<dependencies>
+			<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>${commons-io.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.codehaus.izpack</groupId>
+				<artifactId>izpack-compiler</artifactId>
+				<version>${izpack.version}</version>
+				<scope>provided</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+
+	</dependencies>
+
+	<build>
+		<defaultGoal>install</defaultGoal>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>com.akathist.maven.plugins.launch4j</groupId>
+					<artifactId>launch4j-maven-plugin</artifactId>
+					<version>${launch4j.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.izpack</groupId>
+					<artifactId>izpack-maven-plugin</artifactId>
+					<version>${izpack.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

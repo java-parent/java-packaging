@@ -1,0 +1,62 @@
+<langpack>
+    <!-- Admin Strings -->
+    <str id="admin.user.panel" txt="Administrative User"/>
+    <str id="admin.user.panel.title" txt="Create an Administrative User"/>
+    <str id="admin.user.panel.info" txt="Create your administrative user. Your administrative user will be the one to rule them all."/>
+    <str id="admin.user.password.info" txt="You should always use a secure password. Ensure the password has at least eight characters, contains at least one number, and at least one non-alphanumeric symbol."/>
+    <str id="admin.user" txt="Admin User:"/>
+    <str id="admin.user.password" txt="Admin Password:"/>
+    <str id="admin.user.password.confirm" txt="Confirm Admin Password:"/>
+
+    <!-- Creature Strings -->
+    <str id="creature.panel.title" txt="Creature Selection"/>
+    <str id="creature.panel.info" txt="Your mission is to catch'em all. During you're journey you will encounter many violet creatures. You may select up to three creature below to help you on your quest. Select only the very best." />
+    <str id="creature.name" txt="Name:"/>
+
+    <str id="creature.type" txt="Species:" />
+    <str id="creature.type.1" txt="Bulbasaur"/>
+    <str id="creature.type.2" txt="Charmander"/>
+    <str id="creature.type.3" txt="Geodude"/>
+    <str id="creature.type.4" txt="Mew"/>
+    <str id="creature.type.5" txt="Pikachu"/>
+    <str id="creature.type.6" txt="Squirtle"/>
+
+    <str id="creature.colour" txt="Colour:" />
+    <str id="creature.colour.1" txt="Blue"/>
+    <str id="creature.colour.2" txt="Green"/>
+    <str id="creature.colour.3" txt="Indigo"/>
+    <str id="creature.colour.4" txt="Orange"/>
+    <str id="creature.colour.5" txt="Red"/>
+    <str id="creature.colour.6" txt="Violet"/>
+    <str id="creature.colour.7" txt="Yellow"/>
+
+    <str id="creature.name.empty" txt="Please enter a name for your creature."/>
+    <str id="creature.unique" txt="You cannot choose the same creature twice."/>
+
+    <!-- Pack Messages -->
+    <str id="beginner.pack" txt="Beginner Pack"/>
+    <str id="intermediate.pack" txt="Intermediate Pack"/>
+    <str id="advanced.pack" txt="Advanced Pack"/>
+
+    <!-- General Messages -->
+    <str id="password.empty" txt="Please fill in the password fields."/>
+    <str id="password.not.equal" txt="Passwords do no match."/>
+    <str id="password.min.eight.chars" txt="Password must have at least '8' characters."/>
+    <str id="password.min.one.digits" txt="Password must have at least one digit."/>
+    <str id="password.min.one.nonalphanum" txt="Password must have at least one non-alphanumeric symbol."/>
+
+    <!-- Pokedex Messages -->
+    <str id="pokedex.panel.title" txt="Pokedex" />
+    <str id="pokedex.panel.info" txt="This is your pokedex. Here you may query different types of pokemon. Go ahead, type in a name and see if the pokemon you are looking for exists!" />
+    <str id="pokedex.query" txt="Check if your pokedex is working:"/>
+    <str id="pokedex.button" txt="Diagnose"/>
+    <str id="pokedex.working" txt="Success your pokedex is fully functional!"/>
+    <str id="pokedex.error" txt="Pokedex malfunction! Looks like we cannot connect to the pokemond database (www.pokeapi.co)."/>
+
+    <str id="pokedex.pokemon" txt="Pokemon:"/>
+    <str id="pokedex.pokemon.query" txt="Check if pokemon exists:"/>
+    <str id="pokedex.pokemon.button" txt="Query"/>
+    <str id="pokedex.pokemon.working" txt="That pokemon exists!"/>
+    <str id="pokedex.pokemon.error" txt="That pokemon does not exist."/>
+
+</langpack>
